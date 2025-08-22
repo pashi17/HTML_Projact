@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Name</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #a5b1c2;
+            margin: 30px 80px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper {
+            perspective: 1500px;
+            animation: fadeup 0.8s ease-in-out forwards;
+            border-radius: 15px;border-radius: 15px;
+        }
+         @keyframes fadeup{
+            from{opacity: 0;
+            transform: translateY(20px);}
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card {
+            width: 360px;
+            height: 530px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+            box-shadow: 20px 25px 30px #5f5c5c, inset -20px -25px 30px rgb(194, 121, 12);
+            border-radius: 15px;
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        .front-page, .back-page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+        }
+        .front-page {
+            background-image: url("ChatGPT Image Mar 30, 2025, 11_32_14 AM.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .card-info {
+            position: absolute;
+            bottom: 50px;
+            left: 45px;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .card-subtitle {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #0fbcf9;
+        }
+        .back-page {
+            background-color: #1e272e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .card-contant {
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+        }
+        .card-contant h3 {
+            font-size: 1.8rem;
+            font-weight: bolder;
+            margin-bottom: 15px;
+        }
+        .card-descripation {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .card-button {
+            background-color: aqua;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .card-button:hover {
+            background-color: transparent;
+            color: #0fbcf9;
+            border: 1px solid #0fbcf9;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="front-page">
+                <div class="card-info">
+                    <h2 class="title">VICKY PASHI</h2>
+                    <p class="card-subtitle">700 Followers on Instagram</p>
+                </div>
+            </div>
+            <div class="back-page">
+                <div class="card-contant">
+                    <h3>VICKY PASHI</h3>
+                    <p class="card-descripation">
+                        Innovative and dedicated student with a proactive approach towards work and
+                        excellent time management skills. Proficient in Python basics with a knack for
+                        quick social adaptability. Developed several Python projects demonstrating
+                        practical application of programming skills. An aspiring storyteller, avid poetry
+                        writer, enthusiastic carrom player, and an ardent reader of storybooks. Committed
+                        to excelling in academic and extracurricular activities alike.
+                    </p>
+                    <button class="card-button">Explore More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
