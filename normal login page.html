@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        #d1{
+            width: 50%;
+            height: 500px;
+            background-color:  beige;
+            margin-top: 30px;
+            margin: 10px;
+            
+        }
+        #d2{
+            width: 50%;
+            height: 500px;
+            background-color: beige;
+            margin-top: 30px;
+            margin: 10px;
+        }
+        #b1:hover{
+            box-shadow: 0px 0px 5px;
+        }
+        #logo{
+            height: 80px;
+            width: 17%;
+            background-color: blue;
+            margin:10px;
+            background-image: url("Screenshot 2025-04-09 212913.png");
+            background-size: cover;
+            image-resolution: 100%;
+            border: 3px solid salmon;
+        }
+        .w0{
+            height: 130px;
+            padding: 5px;
+            width: 80%;
+            margin-left: 70px;
+            box-shadow: 20px 20px 40px  #e5a863;
+            border-radius: 10px;           
+        }
+        .w{
+           font-size: 3rem;
+           font-weight: 800;
+           background: linear-gradient(90deg,  #ff8a00, #e52e71);
+           -webkit-background-clip: text;
+           background-clip: text;
+           color: transparent;
+           animation: w 3s infinite alternate;
+           transform-style: preserve-3d;
+           
+        }
+        .t{
+          border-radius: 10px;
+          font-size: 15px;
+          border: none;
+          height: 33px;
+          width: 120%;
+          margin-left: 60px;
+          box-shadow: 5px 5px 10px rgb(109, 108, 108), inset 20px 20px 50px rgb(216, 216, 210);
+          padding-left: 10px;
+        }
+        .t:hover{
+            border: 1px solid;
+        }
+        .L{
+            border-radius: 5px;
+            margin-left: 30px;
+            border: none;
+            box-shadow: 3px 3px 5px black, inset 20px 20px 50px beige;
+        }
+        .F{
+            border-radius: 5px;
+           border: none;
+           margin-right: 20px;
+           box-shadow: 3px 3px 5px black, inset 20px 20px 50px beige;
+
+        }
+
+        ul{
+           display: flex;
+           position: absolute;
+           top: 60%;
+           left: 25.5%;
+           transform: translate(-50%, -50%);
+           background-color: beige;
+        }
+        ul li{
+             list-style-type: none;
+        }
+        ul li a{
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            text-align: center;
+            line-height: 50px;
+            font-size: 35px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid rgb(255, 255, 255);
+            box-shadow: 12px 12px 10px rgb(111, 110, 110);
+            z-index: 1;
+        }
+        ul li a .icon{
+            color: white;
+            transform: rotatey(360deg);
+        }
+        ul li a::before{
+            content: --;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            transition: .5s;
+            z-index: 2;
+        }
+        ul li a:hover{
+            top: 0;
+            background-color: aqua;
+            transition: .5s ease;
+           
+        }
+        ul li:nth-child(1) a::before{
+            background-color: rgb(89, 89, 245);
+        }
+        ul li:nth-child(2) a::before{
+            background-color: pink;
+        }
+        ul li:nth-child(3) a::before{
+            background-color: rgb(64, 243, 243);
+        }
+        ul li:nth-child(4) a::before{
+            background-color: rgb(247, 255, 85);
+        }
+    </style>
+
+
+</head>
+<body style="background-color: rgb(210, 210, 249);">
+        <div id="d0" style="display: flex;">
+            <div id="d1">
+                    <div id="logo"></div> 
+                    <center class="w0">
+                    <p><strong class="w" >Wellcome To My Notes</strong></p>
+                    <p><strong class="w">web....</strong></p>                    
+                    </center>
+                    
+                </div>
+
+            <div id="d2">
+                <center>
+                    <div style="width: 60%; height: 300px;">
+                       
+                        <table border="0" align="center" width="330px" height="240px" cellpadding="10px" style="margin-top: 50px; box-shadow: 15px 15px 35px,inset 0px 0px 10px; border-radius: 10px; border: none;">
+                            <tr>
+                                <td align="center" colspan="2"><b>Login Page</b></td>
+                            </tr>
+
+                            <tr>
+                               
+                                <td><input  class="t" type="text" placeholder="User Name" name="u" id="u"></td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td><input class="t" type="text" placeholder="Gmail" name="m" id="m"></td>
+                            </tr>
+
+                            <tr>
+                              
+                              <td><input class="t" type="password" placeholder="Password" name="p" id="p"></td>
+                            </tr>
+
+                            <tr>
+                                <center>
+                                <td>
+                                  <input class="L" style="height: 30px; width: 50%;" id="b1" type="button" value="Login" onclick="username();">
+                                </td>
+
+                                <td >
+                                  <input class="F" style="height: 30px; width: 120px;" id="b1" type="button" value="Forget Password">
+                                </td>
+                                </center>
+                           
+                            </tr>
+
+                        </table>
+                    </div>
+                </center>
+            </div>
+
+            
+    <div>
+        <ul>
+            <li>
+                <a href="#"><i>E</i></a>
+            </li>
+            
+            <li>
+                <a href="#"><i>A</i></a>
+            </li>
+
+                    
+            <li>
+                <a href="#"><i>B</i></a>
+            </li>
+            
+            <li>
+                <a href="#"><i>C</i></a>
+            </li>
+               
+            <li>
+                <a href="#"><i>D</i></a>
+            </li>
+        </ul>
+    </div>
+   
+        </div>    
+
+    <script>
+        function username() {
+            var un = document.getElementById("u");
+            var gm = document.getElementById("m");
+            var pw = document.getElementById("p");
+
+            if (username_validation(un)) {
+                if (gm_validation(gm)) {
+                    if (password_validation(pw, 6, 8)) {
+                        alert("Form Successfully Submitted");
+                        window.location.reload();
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        function username_validation(un) {
+            var pattern = /^[a-zA-Z0-9_]+$/;
+            if (un.value.match(pattern)) {
+                return true;
+            } else {
+                alert('Username must contain only letters, numbers, or underscores.');
+                un.focus();
+                return false;
+            }
+        }
+
+        function gm_validation(gmail) {
+            var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (gmail.value.match(pattern)) {
+                return true;
+            } else {
+                alert("You have entered an invalid Gmail address!");
+                gmail.focus();
+                return false;
+            }
+        }
+
+        function password_validation(pass, min, max) {
+            var len = pass.value.length;
+            if (len === 0 || len < min || len > max) {
+                alert("Password must be between " + min + " and " + max + " characters.");
+                pass.focus();
+                return false;
+            }
+            return true;
+        }
+
+
+            
+
+    </script>
+</body>
+</html>
